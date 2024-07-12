@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  llama_3:
+    build: .
+    #image:
+    container_name: llama_3
+    restart: always
+    tty: true
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - 11434:11434
